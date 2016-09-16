@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ControleAcademico</string>
+    <string-array name="array_sexo">
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
+</resources>
