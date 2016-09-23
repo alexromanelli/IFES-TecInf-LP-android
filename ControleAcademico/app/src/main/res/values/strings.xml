@@ -1,7 +1,19 @@
 <resources>
-    <string name="app_name">ControleAcademico</string>
+
+    <string name="app_name">Controle Academico</string>
+
     <string-array name="array_sexo">
         <item>Masculino</item>
         <item>Feminino</item>
     </string-array>
+
+    <string-array name="array_tipo_curso">
+        <item>Tecnico</item>
+        <item>Tecnologo</item>
+        <item>Bacharelado</item>
+        <item>Licenciatura</item>
+        <item>Lato Sensu</item>
+        <item>Stricto Sensu</item>
+    </string-array>
+
 </resources>

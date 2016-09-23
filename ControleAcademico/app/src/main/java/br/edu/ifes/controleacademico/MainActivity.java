@@ -17,7 +17,18 @@ public class MainActivity extends AppCompatActivity {
         buttonCadastroAlunos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Cadastro de alunos clicado",
+                        Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, CadastroAlunosActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button buttonCadastroCursos = (Button)findViewById(R.id.buttonCadastroCursos);
+        buttonCadastroCursos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CadastroCursosActivity.class);
                 startActivity(intent);
             }
         });
