@@ -25,4 +25,13 @@
         android:layout_marginTop="28dp"
         android:layout_below="@+id/buttonCadastroAlunos"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Cadastro de Professores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:id="@+id/buttonCadastroProfessores"
+        android:layout_below="@+id/buttonCadastroCursos"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

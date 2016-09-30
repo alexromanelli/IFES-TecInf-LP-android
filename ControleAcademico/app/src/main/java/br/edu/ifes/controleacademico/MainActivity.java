@@ -32,5 +32,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button buttonCadastroProfessores = (Button)findViewById(R.id.buttonCadastroProfessores);
+        buttonCadastroProfessores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CadastroProfessorActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CadastroAlunosActivity" />
-        <activity android:name=".CadastroCursosActivity"></activity>
+        <activity android:name=".CadastroCursosActivity" />
+        <activity android:name=".CadastroProfessorActivity"></activity>
     </application>
 
 </manifest>
