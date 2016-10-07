@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Cadastro de alunos clicado",
                         Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(MainActivity.this, CadastroAlunosActivity.class);
+                Intent intent = new Intent(MainActivity.this, ListagemAlunosActivity.class);
                 startActivity(intent);
             }
         });
