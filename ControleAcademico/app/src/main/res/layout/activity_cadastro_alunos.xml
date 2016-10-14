@@ -31,7 +31,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText"
+                android:id="@+id/editTextMatricula"
                 android:layout_weight="1" />
         </LinearLayout>
 
@@ -50,7 +50,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText2"
+                android:id="@+id/editTextNome"
                 android:layout_weight="1" />
         </LinearLayout>
 
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="date"
                 android:ems="10"
-                android:id="@+id/editText3"
+                android:id="@+id/editTextDataNascimento"
                 android:layout_weight="1" />
         </LinearLayout>
 
@@ -106,7 +106,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText4"
+                android:id="@+id/editTextCpf"
                 android:layout_weight="1"
                 android:hint="Digite somente numero" />
         </LinearLayout>
@@ -127,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="phone"
                 android:ems="10"
-                android:id="@+id/editText5"
+                android:id="@+id/editTextTelefone"
                 android:layout_weight="1" />
         </LinearLayout>
 
@@ -147,7 +147,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:ems="10"
-                android:id="@+id/editText6"
+                android:id="@+id/editTextEmail"
                 android:layout_weight="1" />
         </LinearLayout>
 

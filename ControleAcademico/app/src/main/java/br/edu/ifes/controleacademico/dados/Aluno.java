@@ -1,12 +1,13 @@
 package br.edu.ifes.controleacademico.dados;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by romanelli on 06/10/16.
  */
 
-public class Aluno {
+public class Aluno implements Serializable {
     private String matricula;
     private String nome;
     private Date dataNascimento;
