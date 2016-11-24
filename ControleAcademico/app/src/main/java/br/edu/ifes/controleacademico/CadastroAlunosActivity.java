@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 
 import java.text.DateFormat;
 import java.text.ParseException;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -37,15 +39,14 @@ public class CadastroAlunosActivity extends AppCompatActivity {
                 String matricula = editTextMatricula.getText().toString();
                 EditText editTextNome = (EditText) findViewById(R.id.editTextNome);
                 String nome = editTextNome.getText().toString();
-                EditText editTextDataNascimento = (EditText) findViewById(R.id.editTextDataNascimento);
+                DatePicker datePickerDataNascimento = (DatePicker) findViewById(R.id.datePickerDataNascimento);
 
-                DateFormat df = DateFormat.getDateInstance();
-                Date dataNascimento = null;
-                try {
-                    dataNascimento = df.parse(editTextDataNascimento.getText().toString());
-                } catch (ParseException e) {
-                    e.printStackTrace(); // <-------------------- TRATAR EXCEÇAO
-                }
+                int dia = datePickerDataNascimento.getDayOfMonth();
+                int mes = datePickerDataNascimento.getMonth();
+                int ano = datePickerDataNascimento.getYear();
+                Calendar c = Calendar.getInstance();
+                c.set(ano, mes, dia);
+                Date dataNascimento = c.getTime();
 
                 char sexo;
                 if (((CharSequence) spinnerSexo.getSelectedItem()).toString().equals("Masculino"))
@@ -80,7 +81,7 @@ public class CadastroAlunosActivity extends AppCompatActivity {
     private void exibirRegistroNaTela(Aluno aluno) {
         EditText editTextMatricula = (EditText) findViewById(R.id.editTextMatricula);
         EditText editTextNome = (EditText) findViewById(R.id.editTextNome);
-        EditText editTextDataNascimento = (EditText) findViewById(R.id.editTextDataNascimento);
+        DatePicker datePickerDataNascimento = (DatePicker) findViewById(R.id.datePickerDataNascimento);
         EditText editTextCpf = (EditText) findViewById(R.id.editTextCpf);
         Spinner spinnerSexo = (Spinner) findViewById(R.id.spinnerSexo);
         EditText editTextTelefone = (EditText) findViewById(R.id.editTextTelefone);
@@ -90,7 +91,9 @@ public class CadastroAlunosActivity extends AppCompatActivity {
         editTextNome.setText(aluno.getNome());
 
         DateFormat df = DateFormat.getDateInstance();
-        editTextDataNascimento.setText(df.format(aluno.getDataNascimento()));
+        Calendar c = Calendar.getInstance();
+        c.setTime(aluno.getDataNascimento());
+        datePickerDataNascimento.init(c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH), null);
 
         editTextCpf.setText(Long.toString(aluno.getCpf()));
 

@@ -65,13 +65,14 @@
                 android:text="Data de nascimento"
                 android:id="@+id/textView3" />
 
-            <EditText
+            <DatePicker
+                android:id="@+id/datePickerDataNascimento"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="date"
-                android:ems="10"
-                android:id="@+id/editTextDataNascimento"
-                android:layout_weight="1" />
+                android:calendarViewShown="false"
+                android:isScrollContainer="false"
+                android:spinnersShown="false" />
+
         </LinearLayout>
 
         <LinearLayout
