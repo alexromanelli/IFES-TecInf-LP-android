@@ -1,5 +1,6 @@
 package br.edu.ifes.testesqlite;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -11,7 +12,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String TAG = "DatabaseHelper";
     public static final String DATABASE_NAME = "turma";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
     private static final String DATABASE_CREATE =
             "create table turma (_id integer primary key autoincrement,"
                     + "abreviacao text not null, descricao text not null,"
@@ -28,6 +29,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("insert into turma (abreviacao, descricao, ano, semestre) " +
+                "values ('SI', 'Sistemas de Informação', 2015, 1)," +
+                "       ('IMI', 'Técnico em Informática Integrado', 2015, 1)");
     }
 }
