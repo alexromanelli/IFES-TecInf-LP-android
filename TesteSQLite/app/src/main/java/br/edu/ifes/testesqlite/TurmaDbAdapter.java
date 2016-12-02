@@ -12,6 +12,13 @@ import android.database.sqlite.SQLiteException;
 
 public class TurmaDbAdapter {
 
+    private static TurmaDbAdapter INSTANCE;
+    public static TurmaDbAdapter getInstance() {
+        if (INSTANCE == null)
+            INSTANCE = new TurmaDbAdapter(null);
+        return INSTANCE;
+    }
+
     public static final String ID = "_id";
     public static final String ABREVIACAO = "abreviacao";
     public static final String DESCRICAO = "descricao";
@@ -27,6 +34,7 @@ public class TurmaDbAdapter {
 
     public TurmaDbAdapter(Context ctx) {
         this.ctx = ctx;
+        INSTANCE = this;
     }
 
     public TurmaDbAdapter open() throws SQLiteException {

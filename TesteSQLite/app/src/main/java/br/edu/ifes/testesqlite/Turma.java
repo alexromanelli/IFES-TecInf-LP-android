@@ -11,7 +11,7 @@ public class Turma {
     private int ano;
     private int semestre;
 
-    public Turma(String abreviacao, int ano, String descricao, long id, int semestre) {
+    public Turma(long id, String abreviacao, String descricao, int ano, int semestre) {
         this.abreviacao = abreviacao;
         this.ano = ano;
         this.descricao = descricao;
